@@ -1,17 +1,11 @@
 @model ExemploSQLite.Models.Produto
 
-<h2>Editar Produto</h2>
+<h2>Excluir Produto</h2>
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
-    <div>
-        <label>Nome:</label>
-        <input asp-for="Nome" />
-    </div>
-    <div>
-        <label>Preço:</label>
-        <input asp-for="Preco" />
-    </div>
-    <button type="submit">Salvar Alterações</button>
+<p>Tem certeza de que deseja excluir o produto <strong>@Model.Nome</strong>?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit">Sim, excluir</button>
     <a href="/Produtos">Cancelar</a>
 </form>
