@@ -1,0 +1,13 @@
+@model ExemploSQLite.Models.Produto
+<h2>Criar Produto</h2>
+<form asp-action="Criar" method="post">
+    <div>
+        <label>Nome:</label>
+        <input asp-for="Nome" />
+    </div>
+    <div>
+        <label>Preço:</label>
+        <input asp-for="Preco" />
+    </div>
+    <button type="submit">Salvar</button>
+</form>

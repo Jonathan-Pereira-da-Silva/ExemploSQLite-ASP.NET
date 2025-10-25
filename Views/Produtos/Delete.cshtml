@@ -1,0 +1,17 @@
+@model ExemploSQLite.Models.Produto
+
+<h2>Editar Produto</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Nome:</label>
+        <input asp-for="Nome" />
+    </div>
+    <div>
+        <label>Preço:</label>
+        <input asp-for="Preco" />
+    </div>
+    <button type="submit">Salvar Alterações</button>
+    <a href="/Produtos">Cancelar</a>
+</form>

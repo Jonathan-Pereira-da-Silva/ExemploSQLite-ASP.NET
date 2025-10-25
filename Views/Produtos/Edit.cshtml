@@ -1,0 +1,11 @@
+@model ExemploSQLite.Models.Produto
+
+<h2>Excluir Produto</h2>
+
+<p>Tem certeza de que deseja excluir o produto <strong>@Model.Nome</strong>?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit">Sim, excluir</button>
+    <a href="/Produtos">Cancelar</a>
+</form>
